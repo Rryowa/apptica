@@ -14,3 +14,6 @@ Route::get('/test-redis', function () {
     Cache::put('test_key', 'Hello Redis!', 600); // 10 minutes
     return Cache::get('test_key');
 });
+Route::get('/debug-cache', function () {
+    return config('cache.default');
+});
